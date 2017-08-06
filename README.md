@@ -29,3 +29,5 @@ CREATE TABLE STUDENT(
 
 ![Alt text](insert.PNG?raw=true "Insert Window")
 
+![Alt text](delete.PNG?raw=true "Insert Window")
+
