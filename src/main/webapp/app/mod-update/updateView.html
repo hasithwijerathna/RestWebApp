@@ -1,0 +1,19 @@
+<form>
+    <div class="form-group" ng-show="_data.id">
+        <label for="idInput">Id</label>
+        <input ng-model="_data.id" type="text" class="form-control" id="idInput" aria-describedby="emailHelp" placeholder="student ID" ng-disabled="_data.id">
+    </div>
+    <div class="form-group">
+        <label for="nameInput">Name</label>
+        <input ng-model="_data.name" type="text" class="form-control" id="nameInput" placeholder="Enter name">
+    </div>
+    <div class="form-group">
+        <label for="ageInput">Age</label>
+        <input ng-model="_data.age" type="number" class="form-control" id="ageInput" placeholder="Enter Age">
+    </div>
+    <div class="form-group">
+        <label for="addressInput">Address</label>
+        <input ng-model="_data.address" type="text" class="form-control" id="addressInput" placeholder="Enter Address">
+    </div>
+    <button type="submit" class="btn btn-primary" ng-click="updateUser()">Update</button>
+</form>

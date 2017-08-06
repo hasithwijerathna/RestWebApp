@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.hasith.sample.student.dao.StudentMapper">
+
+    <select id="getStudentById" parameterType="int" resultType="com.hasith.sample.student.model.Student">
+        SELECT
+        student_id as id,
+        name as name,
+        age as age,
+        address as address
+        FROM STUDENT
+        WHERE student_id = #{studentId}
+    </select>
+
+    <select id="getStudents" resultMap="StudentResultSet">
+        SELECT * FROM STUDENT
+    </select>
+
+    <insert id="insertStudent" parameterType="Student" useGeneratedKeys="true" keyProperty="id">
+        INSERT INTO STUDENT(name, age, address)
+        VALUES(#{name}, #{age}, #{address})
+    </insert>
+
+    <update id="updateStudent" parameterType="Student">
+        UPDATE STUDENT
+        SET name=#{name}, age=#{age}, address=#{address}
+        WHERE
+        student_id = #{id}
+    </update>
+
+    <delete id="deleteStudent" parameterType="int">
+        DELETE FROM STUDENT WHERE
+        student_id = #{studentId}
+    </delete>
+
+    <resultMap type="Student" id="StudentResultSet">
+        <id property="id" column="student_id"/>
+        <result property="name" column="name"/>
+        <result property="age" column="age"/>
+        <result property="address" column="address"/>
+    </resultMap>
+</mapper>
