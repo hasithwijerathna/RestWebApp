@@ -25,7 +25,7 @@ CREATE TABLE STUDENT(
 - `Jersey` framework used to developing RESTful Web services.
 - `Apache Maven` is used as a software project management tool.
 
-![Alt text](search.PNG?raw=true "Optional Title")
+![Alt text](search.PNG?raw=true "Search window")
 
-![Alt text](insert.PNG?raw=true "Optional Title")
+![Alt text](insert.PNG?raw=true "Insert Window")
 
