@@ -12,24 +12,24 @@ import java.io.Reader;
  */
 public class MyBatisDAOUtil {
 
-	private static SqlSessionFactory sqlSessionFactory;
+    private static SqlSessionFactory sqlSessionFactory;
 
-	static {
-		Reader reader = null;
-		try {
-			reader = Resources.getResourceAsReader("mybatis-config.xml");
-		} catch (IOException e) {
-			throw new RuntimeException(e.getMessage());
-		}
-		sqlSessionFactory = new SqlSessionFactoryBuilder().build(reader);
-	}
+    static {
+        Reader reader = null;
+        try {
+            reader = Resources.getResourceAsReader("mybatis-config.xml");
+        } catch (IOException e) {
+            throw new RuntimeException(e.getMessage());
+        }
+        sqlSessionFactory = new SqlSessionFactoryBuilder().build(reader);
+    }
 
-	/**
-	 * get the session to access database.
-	 *
-	 * @return SqlSessionFactory
-	 */
-	public static SqlSessionFactory getSqlSessionFactory() {
-		return sqlSessionFactory;
-	}
+    /**
+     * get the session to access database.
+     *
+     * @return SqlSessionFactory
+     */
+    public static SqlSessionFactory getSqlSessionFactory() {
+        return sqlSessionFactory;
+    }
 }
