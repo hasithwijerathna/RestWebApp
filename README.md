@@ -8,7 +8,7 @@ ngDialog
 tomcat server
 ```
 
-```
+``` mysql
 CREATE DATABASE test_db;
 
 CREATE TABLE STUDENT(
